@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Vuori | AI Software Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Daniel Vuori, AI software engineer and full‑stack developer with 8+ years of experience across healthcare, social, insurance, and real estate."
+    />
+    <!-- Tab icon / favicon -->
+    <link rel="icon" type="image/svg+xml" href="tab-logo.svg" />
+    <link rel="alternate icon" type="image/png" href="tab-logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="background-canvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <div class="logo-wrapper">
+        <!-- Replace src with your preferred logo file name -->
+        <img src="logo-dark.svg" alt="Daniel Vuori logo" class="logo-image" />
+        <span class="logo-text">Daniel Vuori</span>
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span>
+        </button>
+         <ul class="nav-list">
+           <li><a href="#intro">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="intro" class="section hero">
+        <div class="hero-content reveal">
+          <p class="hero-kicker">AI Software Engineer · Full‑Stack Developer</p>
+          <h1>Hi, I’m <span class="accent">Daniel Vuori</span>.</h1>
+          <p class="hero-lead">
+            I design, build, and deploy AI‑powered products end‑to‑end — from data
+            pipelines and models to scalable web applications — across healthcare,
+            social platforms, insurance, and real estate.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn ghost">Let’s work together</a>
+          </div>
+          <div class="hero-meta">
+            <span>8+ years in AI &amp; full‑stack development</span>
+             <span>End‑to‑end product ownership</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-header reveal">
+          <h1>Projects</h1>
+          <p>
+            Selected work showcasing how I translate AI capabilities into reliable, user‑centered products —
+            from problem framing and system design to production deployment.
+          </p>
+        </div>
+        <div class="cards-grid">
+          <a
+            class="card reveal project-card"
+            href="https://emandai.net/en/healthcare/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open EM&AI conversational AI platform"
+          >
+            <img
+              class="project-image"
+              src="assets/projects/emandai.png"
+              alt="Screenshot of EM&AI conversational AI platform"
+              loading="lazy"
+            />
+            <h3>Conversational AI Platform</h3>
+            <p class="card-tag">Conversational AI · Automation · Full‑Stack</p>
+            <p>
+              AI ecosystem to automate customer interactions and optimize business operations.
+            </p>
+            <ul>
+              <li>Built multi‑channel chat with RAG, intent handling, and business system integrations.</li>
+              <li>Shipped production services with observability, caching, and scalable APIs.</li>
+            </ul>
+            <div class="project-cta" aria-hidden="true">View Live →</div>
+          </a>
+
+          <a
+            class="card reveal project-card"
+            href="https://www.lilliacare.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open chronic care management platform"
+          >
+            <img
+              class="project-image"
+              src="assets/projects/lilliaai.png"
+              alt="Screenshot of chronic care management platform"
+              loading="lazy"
+            />
+            <h3>Chronic Care Management Platform</h3>
+            <p class="card-tag">Healthcare · Monitoring · AI</p>
+            <p>
+              AI platform for long‑term disease management with continuous monitoring and personalized care plans.
+            </p>
+            <ul>
+              <li>Built patient monitoring dashboards and AI risk signals from time‑series data.</li>
+              <li>Designed secure APIs and data models for care plans, tasks, and messaging workflows.</li>
+            </ul>
+            <div class="project-cta" aria-hidden="true">View Live →</div>
+          </a>
+
+          <a
+            class="card reveal project-card"
+            href="https://butterflies.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open AI-augmented social media platform"
+          >
+            <img
+              class="project-image"
+              src="assets/projects/butterfliesai.png"
+              alt="Screenshot of AI-augmented social media platform"
+              loading="lazy"
+            />
+            <h3>AI‑Augmented Social Media Platform</h3>
+            <p class="card-tag">Social · AI Personas · Full‑Stack</p>
+            <p>
+              Social platform where humans and AI personas coexist and interact in a shared feed.
+            </p>
+            <ul>
+              <li>Implemented feed ranking using behavioral signals and AI character interaction loops.</li>
+              <li>Built full‑stack features with safety constraints and performance optimization.</li>
+            </ul>
+            <div class="project-cta" aria-hidden="true">View Live →</div>
+          </a>
+
+          <article class="card reveal project-card" aria-label="Invoice OCR automation project">
+            <img
+              class="project-image"
+              src="assets/projects/invoice-ocr.svg"
+              alt="Generated visual for invoice OCR automation project"
+              loading="lazy"
+            />
+            <h3>Invoice Extraction &amp; Generator</h3>
+            <p class="card-tag">Computer Vision · OCR · Document AI</p>
+            <p>
+              AI system that extracts structured data from invoice PDFs and generates validated outputs.
+            </p>
+            <ul>
+              <li>Built OCR + layout parsing pipeline with model-assisted validation and error reduction.</li>
+              <li>Generated structured outputs (JSON/CSV) and integrated with downstream accounting workflows.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section section-alt">
+        <div class="section-header reveal">
+          <h2>Skills &amp; Focus Areas</h2>
+          <p>
+            I bridge product, data, and engineering — taking ideas from zero to production with clear communication.
+          </p>
+        </div>
+        <div class="skills-grid">
+          <div class="skills-group reveal">
+            <h3>AI &amp; MLOps</h3>
+            <ul>
+              <li>LLM apps with RAG, guardrails, prompt orchestration</li>
+              <li>NLP/vision/classical ML; evaluation and monitoring</li>
+              <li>Feature pipelines, embeddings, vector search</li>
+              <li>Model serving plus batch/stream processing</li>
+            </ul>
+          </div>
+          <div class="skills-group reveal">
+            <h3>Full‑Stack &amp; APIs</h3>
+            <ul>
+              <li>TypeScript, React, Node.js; design systems and UX polish</li>
+              <li>Python (FastAPI, Django/Flask); REST/GraphQL APIs</li>
+              <li>WebSockets/events; auth, RBAC, rate limiting</li>
+              <li>Testing &amp; observability (Playwright/Jest/Pytest, OpenTelemetry)</li>
+            </ul>
+          </div>
+          <div class="skills-group reveal">
+            <h3>Architecture &amp; Delivery</h3>
+            <ul>
+              <li>System design; cloud (AWS/GCP), containers, CI/CD</li>
+              <li>Data stores: Postgres, Redis, Elasticsearch/vector DBs</li>
+              <li>Security/privacy by design; compliance awareness</li>
+              <li>Technical leadership, grooming, and roadmapping</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="section-header reveal">
+          <h2>Experience</h2>
+          <p>
+            8+ years delivering AI‑driven products end‑to‑end, from early‑stage ideas
+            to scalable production systems.
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Senior AI Software Engineer</h3>
+              <p class="timeline-meta">Healthcare · Insurance · Conversational AI</p>
+              <p>
+                Led AI features for clinical workflows, underwriting, and conversational automation (RAG, chat,
+                risk/triage), delivering production systems with strong observability and safeguards.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Full‑Stack / ML Engineer</h3>
+              <p class="timeline-meta">Social &amp; Media Platforms</p>
+              <p>
+                Built ranking and feed systems with safety constraints, shipped AI persona interactions, and owned
+                full‑stack product delivery with A/B experimentation and performance focus.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Software &amp; Data Engineer</h3>
+              <p class="timeline-meta">Cross‑Industry Projects</p>
+              <p>
+                Delivered web and data systems across domains; built APIs, data pipelines, and dashboards while
+                collaborating with stakeholders to ship usable, measurable outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section section-alt">
+        <div class="section-header reveal">
+          <h2>Education</h2>
+          <p>
+            Software engineering foundation with ongoing self‑learning across modern systems and AI.
+          </p>
+        </div>
+        <div class="education-grid">
+          <article class="education-item reveal">
+            <h3>Singapore Institute of Technology (SIT)</h3>
+            <p class="timeline-meta">B.Eng in ICT, Software Engineering · 2012 – 2016</p>
+            <p>
+              Studied software engineering, algorithms, databases, and distributed systems with hands‑on projects
+              across web apps, APIs, and data-driven systems.
+            </p>
+          </article>
+          <article class="education-item reveal">
+            <h3>Ongoing Learning</h3>
+            <p class="timeline-meta">AI, MLOps &amp; Product</p>
+            <p>
+              Regularly explore modern LLM tooling, MLOps practices, and product‑led
+              development — applying those learnings directly to real projects.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="section-header reveal">
+          <h2>Let’s Connect</h2>
+          <p>
+            Interested in collaborating, hiring, or discussing an idea? Reach out and
+            tell me a bit about what you’re building.
+          </p>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-details reveal">
+            <h3>Quick details</h3>
+            <ul>
+              <li>Based in: Remote‑friendly</li>
+              <li>Focus: AI products, data‑driven platforms, full‑stack apps</li>
+              <li>Availability: Open to senior IC and lead roles, as well as select consulting engagements</li>
+            </ul>
+          </div>
+          <form
+            class="contact-form reveal"
+            action="mailto:danielvuori1104@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="message">How can I help?</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Tell me a bit about your product, team, or idea."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn primary full-width">Send message</button>
+            <p class="form-note">
+              This form uses your default email client. You can also reach me directly at
+               <a href="mailto:danielvuori1104@gmail.com" class="inline-link accent">danielvuori1104@gmail.com</a>.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Daniel Vuori. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
