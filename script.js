@@ -202,3 +202,83 @@
   }
 })();
 
+// Projects slider
+(() => {
+  const slider = document.querySelector('.project-slider');
+  if (!slider) return;
+
+  const track = slider.querySelector('.project-track');
+  const slides = Array.from(slider.querySelectorAll('.project-slide'));
+  const prevBtn = slider.querySelector('.project-nav-prev');
+  const nextBtn = slider.querySelector('.project-nav-next');
+  const dotsContainer = slider.querySelector('.project-dots');
+
+  if (!track || !slides.length || !prevBtn || !nextBtn || !dotsContainer) return;
+
+  let index = 0;
+  const stepPercent = 50; // show 2 cards per view on desktop
+
+  const goTo = (i) => {
+    const clamped = ((i % slides.length) + slides.length) % slides.length;
+    index = clamped;
+    track.style.transform = `translateX(-${clamped * stepPercent}%)`;
+
+    dotsContainer.querySelectorAll('.project-dot').forEach((dot, dotIndex) => {
+      dot.classList.toggle('is-active', dotIndex === clamped);
+    });
+  };
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'project-dot' + (i === 0 ? ' is-active' : '');
+    dot.setAttribute('aria-label', `Show project ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  prevBtn.addEventListener('click', () => goTo(index - 1));
+  nextBtn.addEventListener('click', () => goTo(index + 1));
+
+  // Autoplay
+  let autoplayId = null;
+  const startAutoplay = () => {
+    if (autoplayId) return;
+    autoplayId = setInterval(() => {
+      goTo(index + 1);
+    }, 2000);
+  };
+
+  const stopAutoplay = () => {
+    if (!autoplayId) return;
+    clearInterval(autoplayId);
+    autoplayId = null;
+  };
+
+  slider.addEventListener('mouseenter', stopAutoplay);
+  slider.addEventListener('mouseleave', startAutoplay);
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopAutoplay();
+    } else {
+      startAutoplay();
+    }
+  });
+
+  // Basic keyboard support when slider is focused
+  slider.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      goTo(index - 1);
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      goTo(index + 1);
+    }
+  });
+
+  // Initialize
+  goTo(0);
+  startAutoplay();
+})();
